@@ -20,6 +20,12 @@ import org.springframework.cache.annotation.EnableCaching;
  *              @Cacheable
  *              @CacheEvict
  *              @CachePut
+ *
+ * 默认使用的是ConcurrentMapCacheManager=ConcurrentMapCache，将数据保存在ConcurrentHashMap中
+ * 开发使用中间件，redis，memcache
+ *
+ * 整合redis作为缓存
+ * 安装redis，使用docker安装
  */
 
 @MapperScan("com.yang.cache.mapper")
