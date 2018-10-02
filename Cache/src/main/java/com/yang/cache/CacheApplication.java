@@ -23,6 +23,15 @@ import org.springframework.cache.annotation.EnableCaching;
  *
  * 默认使用的是ConcurrentMapCacheManager=ConcurrentMapCache，将数据保存在ConcurrentHashMap中
  * 开发使用中间件，redis，memcache
+ *整合redis
+ * 1.使用docker安装redis
+ * 2.引入redis的starter
+ * 3.配置redis
+ * 4.测试缓存
+ *          CacheManager==Cache缓存组件来实际给缓存中取出数据
+ *          引入Redis的starter，容器中保存的是RedisCacheManager，其他CacheManager不起作用
+ *      需自定义CacheManger才能实现用json的数据形式缓存到redis
+ *
  *
  * 整合redis作为缓存
  * 安装redis，使用docker安装
